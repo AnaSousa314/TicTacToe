@@ -59,16 +59,15 @@ function jogar(p){
           quemJoga=1;
         }
       break;
-      case 9:
+    
+      default://p 9
         if (jogo[2][2]=="") {
           jogo[2][2]="X";
           quemJoga=1;
         }
-      break;
-    
-      default:
         break;
     }
+    atualizaTabuleiro();
   }
 }
 
@@ -80,6 +79,29 @@ function inicia(){
     ["","",""],
     ["","",""]
   ];
+
+  tabuleiro=[
+    [document.getElementById("p1"),document.getElementById("p2"),document.getElementById("p3")],
+    [document.getElementById("p4"),document.getElementById("p5"),document.getElementById("p6")],
+    [document.getElementById("p7"),document.getElementById("p8"),document.getElementById("p9")]
+  ];
+}
+
+function atualizaTabuleiro(){
+  for (let l = 0; l < 3; l++) {
+    for (let c = 0; c < 3; c++) {
+      if (jogo[l][c]=="X") {
+        tabuleiro[l][c].innerHTML="X"
+        tabuleiro[l][c].style.cursor="default";
+      }else if (jogo[l][c]=="O") {
+        tabuleiro[l][c].innerHTML="O"
+        tabuleiro[l][c].style.cursor="default";
+      }else{
+        tabuleiro[l][c].innerHTML=""
+        tabuleiro[l][c].style.cursor="pointer";
+      }
+    }
+  }
 }
 
 window.addEventListener('load',inicia);
