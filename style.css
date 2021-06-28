@@ -6,7 +6,6 @@
   align-content: flex-start;
   /* border: 1px solid red; */
   margin-top: 20px;
-
 }
 
 .posJogo{
@@ -16,6 +15,9 @@
   padding: 0;
   cursor: pointer;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
   /* border: 1px solid black; */
 }
 
