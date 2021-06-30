@@ -6,6 +6,7 @@ let jogando=true;
 let nivel=1;
 let jogadaCpu=1;
 let quemComeca=1;
+let jogada=0;
 
 
 function cpuJoga(){
@@ -19,6 +20,156 @@ function cpuJoga(){
       jogo[l][c]="O";
     }else if(nivel==2){
       //NIVEL 2
+      //ATAQUE
+      //jogadas linha 1
+      if((jogo[0][0]=="O")&&(jogo[0][1]=="O")&&(jogo[0][2]=="")){
+        jogo[0][2]="O";
+      }else if((jogo[0][0]=="O")&&(jogo[0][2]=="O")&&(jogo[0][1]=="")){
+        jogo[0][1]="O";
+      }else if((jogo[0][1]=="O")&&(jogo[0][2]=="O")&&(jogo[0][0]=="")){
+        jogo[0][0]="O";
+      }else
+      //jogadas linha 2
+      if((jogo[1][0]=="O")&&(jogo[1][1]=="O")&&(jogo[1][2]=="")){
+        jogo[1][2]="O";
+      }else if((jogo[1][0]=="O")&&(jogo[1][2]=="O")&&(jogo[1][1]=="")){
+        jogo[1][1]="O";
+      }else if((jogo[1][1]=="O")&&(jogo[1][2]=="O")&&(jogo[1][0]=="")){
+        jogo[1][0]="O";
+      }else
+      //jogadas linha 3
+      if((jogo[2][0]=="O")&&(jogo[2][1]=="O")&&(jogo[2][2]=="")){
+        jogo[2][2]="O";
+      }else if((jogo[2][0]=="O")&&(jogo[2][2]=="O")&&(jogo[2][1]=="")){
+        jogo[2][1]="O";
+      }else if((jogo[2][1]=="O")&&(jogo[2][2]=="O")&&(jogo[2][0]=="")){
+        jogo[2][0]="O";
+      }else
+      //jogadas coluna 1
+      if((jogo[0][0]=="O")&&(jogo[1][0]=="O")&&(jogo[2][0]=="")){
+        jogo[2][0]="O";
+      }else if((jogo[0][0]=="O")&&(jogo[2][0]=="O")&&(jogo[1][0]=="")){
+        jogo[1][0]="O";
+      }else if((jogo[1][0]=="O")&&(jogo[2][0]=="O")&&(jogo[0][0]=="")){
+        jogo[0][0]="O";
+      }else
+      //jogadas coluna 2
+      if((jogo[0][1]=="O")&&(jogo[1][1]=="O")&&(jogo[2][1]=="")){
+        jogo[2][1]="O";
+      }else if((jogo[0][1]=="O")&&(jogo[2][1]=="O")&&(jogo[1][1]=="")){
+        jogo[1][1]="O";
+      }else if((jogo[1][1]=="O")&&(jogo[2][1]=="O")&&(jogo[0][1]=="")){
+        jogo[0][1]="O";
+      }else
+      //jogadas coluna 3
+      if((jogo[0][2]=="O")&&(jogo[1][2]=="O")&&(jogo[2][2]=="")){
+        jogo[2][2]="O";
+      }else if((jogo[0][2]=="O")&&(jogo[2][2]=="O")&&(jogo[1][2]=="")){
+        jogo[1][2]="O";
+      }else if((jogo[1][2]=="O")&&(jogo[2][2]=="O")&&(jogo[0][2]=="")){
+        jogo[0][2]="O";
+      }else
+      //jogadas diagonal 1
+      if((jogo[0][0]=="O")&&(jogo[1][1]=="O")&&(jogo[2][2]=="")){
+        jogo[2][2]="O";
+      }else if((jogo[0][0]=="O")&&(jogo[2][2]=="O")&&(jogo[1][1]=="")){
+        jogo[1][1]="O";
+      }else if((jogo[1][1]=="O")&&(jogo[2][2]=="O")&&(jogo[0][0]=="")){
+        jogo[0][0]="O";
+      }else
+      //jogadas diagonal 2
+      if((jogo[0][2]=="O")&&(jogo[1][1]=="O")&&(jogo[2][0]=="")){
+        jogo[2][0]="O";
+      }else if((jogo[0][2]=="O")&&(jogo[2][0]=="O")&&(jogo[1][1]=="")){
+        jogo[1][1]="O";
+      }else if((jogo[2][0]=="O")&&(jogo[1][1]=="O")&&(jogo[0][2]=="")){
+        jogo[0][2]="O";
+      }else
+      //DEFESA
+      //jogadas linha 1
+      if((jogo[0][0]=="X")&&(jogo[0][1]=="X")&&(jogo[0][2]=="")){
+        jogo[0][2]="O";
+      }else if((jogo[0][0]=="X")&&(jogo[0][2]=="X")&&(jogo[0][1]=="")){
+        jogo[0][1]="O";
+      }else if((jogo[0][1]=="X")&&(jogo[0][2]=="X")&&(jogo[0][0]=="")){
+        jogo[0][0]="O";
+      }else
+      //jogadas linha 2
+      if((jogo[1][0]=="X")&&(jogo[1][1]=="X")&&(jogo[1][2]=="")){
+        jogo[1][2]="O";
+      }else if((jogo[1][0]=="X")&&(jogo[1][2]=="X")&&(jogo[1][1]=="")){
+        jogo[1][1]="O";
+      }else if((jogo[1][1]=="X")&&(jogo[1][2]=="X")&&(jogo[1][0]=="")){
+        jogo[1][0]="O";
+      }else
+      //jogadas linha 3
+      if((jogo[2][0]=="X")&&(jogo[2][1]=="X")&&(jogo[2][2]=="")){
+        jogo[2][2]="O";
+      }else if((jogo[2][0]=="X")&&(jogo[2][2]=="X")&&(jogo[2][1]=="")){
+        jogo[2][1]="O";
+      }else if((jogo[2][1]=="X")&&(jogo[2][2]=="X")&&(jogo[2][0]=="")){
+        jogo[2][0]="O";
+      }else
+      //jogadas coluna 1
+      if((jogo[0][0]=="X")&&(jogo[1][0]=="X")&&(jogo[2][0]=="")){
+        jogo[2][0]="O";
+      }else if((jogo[0][0]=="X")&&(jogo[2][0]=="X")&&(jogo[1][0]=="")){
+        jogo[1][0]="O";
+      }else if((jogo[1][0]=="X")&&(jogo[2][0]=="X")&&(jogo[0][0]=="")){
+        jogo[0][0]="O";
+      }else
+      //jogadas coluna 2
+      if((jogo[0][1]=="X")&&(jogo[1][1]=="X")&&(jogo[2][1]=="")){
+        jogo[2][1]="O";
+      }else if((jogo[0][1]=="X")&&(jogo[2][1]=="X")&&(jogo[1][1]=="")){
+        jogo[1][1]="O";
+      }else if((jogo[1][1]=="X")&&(jogo[2][1]=="X")&&(jogo[0][1]=="")){
+        jogo[0][1]="O";
+      }else
+      //jogadas coluna 3
+      if((jogo[0][2]=="X")&&(jogo[1][2]=="X")&&(jogo[2][2]=="")){
+        jogo[2][2]="O";
+      }else if((jogo[0][2]=="X")&&(jogo[2][2]=="X")&&(jogo[1][2]=="")){
+        jogo[1][2]="O";
+      }else if((jogo[1][2]=="X")&&(jogo[2][2]=="X")&&(jogo[0][2]=="")){
+        jogo[0][2]="O";
+      }else
+      //jogadas diagonal 1
+      if((jogo[0][0]=="X")&&(jogo[1][1]=="X")&&(jogo[2][2]=="")){
+        jogo[2][2]="O";
+      }else if((jogo[0][0]=="X")&&(jogo[2][2]=="X")&&(jogo[1][1]=="")){
+        jogo[1][1]="O";
+      }else if((jogo[1][1]=="X")&&(jogo[2][2]=="X")&&(jogo[0][0]=="")){
+        jogo[0][0]="O";
+      }else
+      //jogadas diagonal 2
+      if((jogo[0][2]=="X")&&(jogo[1][1]=="X")&&(jogo[2][0]=="")){
+        jogo[2][0]="O";
+      }else if((jogo[0][2]=="X")&&(jogo[2][0]=="X")&&(jogo[1][1]=="")){
+        jogo[1][1]="O";
+      }else if((jogo[2][0]=="X")&&(jogo[1][1]=="X")&&(jogo[0][2]=="")){
+        jogo[0][2]="O";
+      }else{
+        if(jogada<8){
+          let l,c;
+
+          do{
+            l=Math.round(Math.random()*2);
+            c=Math.round(Math.random()*2);
+          }while(jogo[l][c]!="");
+          jogo[l][c]="O";
+        }else{
+          for(let l=0;l<3;l++){
+            for(let c=0;c<3;c++){
+              if(jogo[l][c]==""){
+                jogo[l][c]="O";
+              }
+            }
+          }
+        }
+      }
+    }
+
     }
     verifica=verificaVitoria();
     if (verifica!="") {
@@ -26,9 +177,10 @@ function cpuJoga(){
       jogando=false;
     }
     atualizaTabuleiro();
+    jogada++;
     quemJoga=0;
   }
-}
+
 
 function verificaVitoria(){
   let l,c;
@@ -124,14 +276,27 @@ function jogar(p){
         alert(verifica+" venceu");
         jogando=false;
       }
+      jogada++;
       cpuJoga();
     }
   }
 }
 
+function escolhaNivel1(){
+  nivel=1;
+}
+
+function escolhaNivel2(){
+  nivel=2;
+}
+
+
+
+
 function inicia(){
   jogando=true;
   jogadaCpu=1;
+  jogada=0;
   jogo=[
     ["","",""],
     ["","",""],
