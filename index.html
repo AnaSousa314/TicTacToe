@@ -11,47 +11,70 @@
 </head>
 <body>
 
-  <div id="dvmenu">
-    <div id="escNivel">
-      Escolha o nivel de dificuldade:
-      <button onclick="escolhaNivel1()">Nivel 1</button>
-      <button onclick="escolhaNivel2()">Nivel 2</button>
-    </div>
-    <div id="dvQuemComeca">
-      Quem Joga: 
-    </div>
-    <button onclick="inicia()">Iniciar Jogo</button>
-  </div>
+  <div class="content">
+    <div>
 
-  <div id="dvjogo">
-    <div class="posJogo" id="p1" onclick="jogar(1)">
+      <div id="dvmenu">
+        <div id="escNivel">
+          Escolha o nível de dificuldade:
+          <button onclick="escolhaNivel1()">Nivel 1</button>
+          <button onclick="escolhaNivel2()">Nivel 2</button>
+        </div>
+        <div id="dificuldade">
 
-    </div>
-    <div class="posJogo" id="p2" onclick="jogar(2)">
-
-    </div>
-    <div class="posJogo" id="p3" onclick="jogar(3)">
-
-    </div>
-    <div class="posJogo" id="p4" onclick="jogar(4)">
-
-    </div>
-    <div class="posJogo" id="p5" onclick="jogar(5)">
-
-    </div>
-    <div class="posJogo" id="p6" onclick="jogar(6)">
-
-    </div>
-    <div class="posJogo" id="p7" onclick="jogar(7)">
-
-    </div>
-    <div class="posJogo" id="p8" onclick="jogar(8)">
-
-    </div>
-    <div class="posJogo" id="p9" onclick="jogar(9)">
-
-    </div>
+        </div>
+        <div id="dvQuemComeca">
+          Quem Joga: 
+        </div>
+        <button onclick="inicia()" id="play">Iniciar Jogo</button>
+      </div>
     
+      <div id="dvjogo">
+        <div class="posJogo" id="p1" onclick="jogar(1)">
+    
+        </div>
+        <div class="posJogo" id="p2" onclick="jogar(2)">
+    
+        </div>
+        <div class="posJogo" id="p3" onclick="jogar(3)">
+    
+        </div>
+        <div class="posJogo" id="p4" onclick="jogar(4)">
+    
+        </div>
+        <div class="posJogo" id="p5" onclick="jogar(5)">
+    
+        </div>
+        <div class="posJogo" id="p6" onclick="jogar(6)">
+    
+        </div>
+        <div class="posJogo" id="p7" onclick="jogar(7)">
+    
+        </div>
+        <div class="posJogo" id="p8" onclick="jogar(8)">
+    
+        </div>
+        <div class="posJogo" id="p9" onclick="jogar(9)">
+    
+        </div>
+        
+      </div>  
+      <div class="placar">
+        <span id="jogador">
+          <legend>JOGADOR</legend>
+          <div id="placarJogador">
+            
+          </div>
+        </span>
+        <span id="cpu">
+          <legend>CPU</legend>
+          <div id="placarCpu">
+            
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
     <script src="./main.js"></script>
 </body>
 </html>
