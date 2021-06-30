@@ -1,3 +1,6 @@
+let dificuldade = document.getElementById("dificuldade");
+let placarCpu = document.getElementById("placarCpu");
+let placarJogador = document.getElementById("placarJogador");
 let jogo=[];
 let tabuleiro=[];
 let quemJoga=0;//o jogador 1-Cpu
@@ -7,7 +10,10 @@ let nivel=1;
 let jogadaCpu=1;
 let quemComeca=1;
 let jogada=0;
-
+let scoreJogador=0;
+let scoreCpu=0;
+placarCpu.innerHTML=`${scoreCpu}`
+placarJogador.innerHTML=`${scoreJogador}`
 
 function cpuJoga(){
   if (jogando) {
@@ -176,6 +182,11 @@ function cpuJoga(){
       alert(verifica+" venceu");
       jogando=false;
     }
+    if(verifica=="O"){
+      scoreCpu++;
+      placarCpu.innerHTML=`${scoreCpu}`;
+      console.log(scoreCpu);
+    }
     atualizaTabuleiro();
     jogada++;
     quemJoga=0;
@@ -276,6 +287,11 @@ function jogar(p){
         alert(verifica+" venceu");
         jogando=false;
       }
+      if(verifica=="X"){
+        scoreJogador++;
+        placarJogador.innerHTML=`${scoreJogador}`;
+        console.log(scoreJogador);
+      }
       jogada++;
       cpuJoga();
     }
@@ -284,10 +300,12 @@ function jogar(p){
 
 function escolhaNivel1(){
   nivel=1;
+  dificuldade.innerHTML="Nivel "+nivel;
 }
 
 function escolhaNivel2(){
   nivel=2;
+  dificuldade.innerHTML="Nivel "+nivel;
 }
 
 
