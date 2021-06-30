@@ -1,70 +1,157 @@
+body{
+  overflow: hidden;
+  background-color: black;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dvmenu{
+  margin-top: 30px;
+  font-size: 24px;
+  color: white;
+}
+
+#dificuldade{
+  color: #fff;
+}
+
+#dvmenu button{
+  height: 30px;
+  width: 100px;
+  border: none; 
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#dvmenu button:nth-child(1){
+  background-color: rgb(52, 224, 52);
+  color: #fff;
+}
+
+#dvmenu button:nth-child(1):hover{
+  background-color: rgb(42, 177, 42);
+  color: #fff;
+}
+
+#dvmenu button:nth-child(2){
+  background-color: rgb(216, 39, 39);
+  color: #fff;
+}
+
+#dvmenu button:nth-child(2):hover{
+  background-color: rgb(179, 34, 34);
+  color: #fff;
+}
+
+#play{
+  background-color: rgb(20, 224, 156);
+  color: #fff;
+  margin-top: 10px;
+}
+
+#play:hover{
+  background-color: rgb(26, 163, 117);
+  color: #fff;
+}
+
 #dvjogo{
-  width: 160px;
-  height: 160px;
+  width: 400px;
+  height: 400px;
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-content: center;
+  justify-content: center;
   /* border: 1px solid red; */
-  margin-top: 20px;
+  margin-top: 20px ;
 }
 
 .posJogo{
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   margin: 0;
   padding: 0;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 50px;
+  color: #fff;
   /* border: 1px solid black; */
 }
 
 #p1{
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
 }
 
 #p2{
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
 }
 
 #p3{
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
 }
 
 #p4{
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
 }
 
 #p5{
-  border: 1px solid black;;
+  border: 3px solid #fff;;
 }
 
 #p6{
-  border-left: 1px solid black;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 3px solid #fff;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
 }
 
 #p7{
-  border-top: 1px solid black;
-  border-right: 1px solid black;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
 }
 
 #p8{
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-top: 3px solid #fff;
 }
 
 #p9{
-  border-top: 1px solid black;
-  border-left: 1px solid black;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+
+.placar{
+  /* background-color: aqua; */
+  color: #fff;
+  height: auto;
+  width: 400px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#jogador{
+  border: 1px solid #fff;
+  width: 200px;
+}
+
+#placarCpu,#placarJogador{
+  border: 1px solid #fff;
+}
+
+#cpu{
+  border: 1px solid #fff;
+  width: 200px;
 }
